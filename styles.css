@@ -1,0 +1,427 @@
+/*------------------------------------------- DECLARING VARIABLES----------------------------------------*/
+
+:root{
+  --primary-color: #264653;
+  --accent-color:#2a9d8f;
+}
+
+:root{
+    --header-height:3rem;
+    --font-weight:600;
+}
+:root{
+    --body-font:"Poppins",sans-serif;
+    --heading-font-size:2 rem;
+    --subheading-font-size:1.5 rem;
+    --normal-font-size:0.9 rem;
+}
+@media screen and (min-width:768px){
+    --heading-font-size:3.5rem;
+    --subheading-font-size:2rem;
+    --normal-font-size:1rem;
+}
+:root{
+    --mg-1:0.5rem;
+    --mg-2:1rem;
+    --mg-3:1.5rem;
+    --mg-4:2rem;
+    --mg-5:2.5rem;
+    --mg-6:3rem;
+}
+:root{
+    --z-back:-10;
+    --z-normal:1;
+    --z-tooltip:10;
+    --z-fixed:100;
+/*----------------------------------------------NECESSARY CSS VALUES---------------------------------------*/
+}
+*,::after ,::before{
+    box-sizing:border-box;
+}
+html{
+     scroll-behavior: smooth;
+}
+/*----------------------------------------------TAGS CSS VALUES--------------------------------------------*/
+body{
+    margin:var(--header-height) 0 0 0;
+    font-family:var(--body-font);
+    font-size:var(--heading-font-size);
+    color:var(--accent-color);
+}
+h1,h2,p{
+    margin:0;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+/*---------------------------------------------- CLASSES CSS VALUES-----------------------------------------*/
+.section-title{
+    position:relative;
+    font-size:var(--subheading-font-size);
+    margin-top:var(--mg-2);
+    margin-bottom:var(--mg-4);
+    text-align:center;
+
+}
+.section-title::after{
+    position:absolute;
+    content:"";
+    width:64px;
+    height:0.18rem;
+    left:0;
+    right:0;
+    margin:auto;
+    top:2rem;
+    background-color:var(--primary-color);
+}
+.section{
+    padding-top:3rem;
+    padding-bottom:2rem;
+
+}
+/*-----------------------------------------------LAYOUT CSS VALUES ---------------------------------------*/
+.bd-grid{
+    max-width:1024px;
+    display:grid;
+    grid-template-columns:100%;
+    column-gap:2rem;
+    width:calc(100%-2rem);
+    margin-left:var(--mg-2);
+    margin-right:var(--mg-2);
+
+}
+.header-1{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background-color:#fff;
+    z-index:var(--z-fixed);
+    box-shadow: 0px 1px 4px rgba(146,161,176,0.15);
+}
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:var(--header-height);
+    font-weight:var(--font-weight);
+}
+@media screen and (max-device-width:768px){
+    .nav-menu{
+        position:fixed;
+        top:var(--header-height);
+        right:-100%;
+        background-color:var(--accent-color);
+        padding:2rem;
+        width:75%;
+        height:100%;
+        transition:0.5s;
+    }
+}
+ .nav-item{
+        margin-bottom:var(--mg-4);
+    }
+    .nav-link{
+        position:relative;
+        color:#fff;
+    }
+    .nav-link:hover{
+        position:relative;
+    }
+    .nav-link:hover::after{
+        position:absolute;
+        content:"";
+        top:2rem;
+        left:0;
+        height:0.18rem;
+        width:100%;
+        background-color:var(--primary-color);
+    }
+    .nav-logo{
+        color:var(--accent-color);
+    }
+    .nav-toogle{
+        color:var(--accent.color);
+        font-size:1.5rem;
+        cursor:pointer;
+    }
+/*----------------------------------------------ACTIVE MENUBAR CSS----------------------------------------*/
+.active::after{
+     position:absolute;
+        content:"";
+        top:2rem;
+        left:0;
+        height:0.18rem;
+        width:100%;
+        background-color:var(--primary-color);
+}
+.show{
+    right:0;
+}
+/*-----------------------------------------------HOME SECTION CSS-----------------------------------------*/
+
+.home{
+    grid-row-gap: 1rem ;
+    height:calc(100vh - 3rem);
+}
+.home-data{
+    align-self:center;
+}
+.home-data{
+    font-size:var(--heading-font-size);
+    margin-bottom:var(--mg-5);
+
+}
+.home-title-color{
+    color:var(--primary-color);
+}
+.home-social{
+    display:flex;
+    flex-direction:column;
+}
+.home-social-icon{
+    color:var(--accent-color);
+    margin-bottom:var(--mg-4);
+    font-size:1.5rem;
+    width:max-content;
+}
+.home-social-icon:hover{
+    color:var(--primary-color);
+}
+.home-img{
+    position:absolute;
+    width:295px;
+    right:0;
+    bottom:0;
+}
+.button-hire ,.button{
+    display:inline-block;
+    background-color:var(--primary-color);
+    color:#fff;
+    font-weight:var(--font-weight);
+    border-radius:0.5rem;
+    padding:.75rem 2.5rem;
+    margin:1rem;
+}
+.button-hire:hover, .button:hover{
+    box-shadow: 0 10px 36px rgba(0,0,0,.15);
+}
+/*----------------------------------------ABOUT SECTION CSS----------------------------------------------*/
+.about-container{
+    display:grid;
+     grid-row-gap:2rem;
+    text-align:center;
+}
+.about-subtitle{
+    margin-bottom:var(--mg-2);
+}
+.about-img{
+   display:flex;
+   justify-content:center;
+}
+.about-img img{
+    width:240px;
+     border-radius:0.5rem;
+}
+/*-------------------------------------------SKILLS SECTION CSS-------------------------------------------*/
+.skills-container{
+     grid-row-gap:2rem;
+    text-align:center;
+}
+.skills-subtitle{
+    margin-bottom:var(--mg-2);
+}
+.skills-text{
+    margin-bottom:var(--mg-4);
+}
+.skills-data{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    font-weight:var(--font-weight);
+    padding:.5rem 1rem;
+    margin-bottom:var(--mg-2);
+    border-radius:.5rem;
+    box-shadow: 0 4px 25px rgba(14,26,49,.5);
+}
+.skills-icon{
+    margin-right:var(--mg-2);
+    font-size:2rem;
+    color:var(--primary-color);
+    margin-bottom:10px;
+}
+.skills-names{
+    align-items:center;
+}
+.skills-bar{
+    position:absolute;
+    left:0;
+    bottom:0;
+    background-color:var(--primary-color);
+    height:.25rem;
+    border-radius:.5rem;
+    z-index:var(--z-back);
+}
+.skills-html{
+    width:50%;
+}
+.skills-css{
+    width:10%;
+}
+.skills-javascript{
+    width:5%;
+}
+.skills-img{
+    border-radius:.5rem;
+}
+/*------------------------------------------WORK SECTION CSS---------------------------------------------*/
+.work{
+    text-align:center;
+}
+
+.work-img{
+    box-shadow:0 4px 25px rgba(14,36,49,.15);
+    border-radius:.5rem;
+    margin-bottom:2rem;
+    overflow:hidden;
+}
+.work-img img{
+    transition:0.5s;
+    cursor:pointer;
+}
+.work-img img:hover{
+    transform:scale(1.1);
+}
+/*---------------------------------------------CONTACT SECTION CSS---------------------------------------*/
+.contact-input{
+    width:100%;
+    font-size:var(--normal-font-size);
+    font-weight:var(--font-weight);
+    padding:1rem;
+    border-radius:.5rem;
+    border: 1.5px solid var(--accent-color);
+    outline:none;
+    margin-bottom:var(--mg-4);
+}
+.contact-button{
+    display:block;
+    border:none;
+    outline:none;
+    font-size:var(--normal-font-size);
+    margin-left:auto;
+    cursor:pointer;
+}
+/*----------------------------------------FOOTER CSS-----------------------------------------------------*/
+.footer{
+    background-color:var(--accent-color);
+    color:#fff;
+    font-weight:var(--font-weight);
+    text-align:center;
+    padding:2rem 0;
+}
+.footer-title{
+    font-size:2rem;
+    margin-bottom:var(--mg-4);
+}
+.footer-social{
+    margin-bottom:var(--mg-4);
+}
+.footer-icon{
+    font-size:1.5rem;
+    color:#fff;
+    margin:0  var(--mg-2) ;
+}
+/*----------------------------------------MEDIA QUERIES--------------------------------------------------*/
+@media screen and (min-width:768px){
+    body{
+        margin:0;
+    }
+    .section{
+        padding-top:4rem;
+        padding-bottom:3rem;
+    }
+    .section-title{
+        margin-bottom:var(--mg-6);
+    }
+    .section-title::after{
+        width:80px;
+        top:3rem;
+    }
+    .navbar{
+        height:calc(var(--header-height) +1rem );
+    }
+    .nav-list{
+        display:flex;
+        padding-top:0;
+    }
+    .nav-item{
+        margin-left:var(--mg-6);
+        margin-bottom:0;
+    }
+    .nav-toogle{
+        display:none;
+    }
+    .nav-link{
+        color:var(--accent-color);
+    }
+    .home{
+        height:100vh;
+    }
+    .home-data{
+        align-self:flex-end;
+    }
+    .home-social{
+        padding-top:0;
+        padding-bottom:2.5rem;
+        flex-direction:row;
+        align-self:flex-end;
+    }
+    .home-social-icon{
+        margin-bottom:0;
+        margin-right:var(--mg-4);
+    }
+    .home-img{
+        width:457px;
+        bottom:15%;
+    }
+    .about-container, .skills-container {
+        grid-template-columns:repeat(2,1fr);
+        align-items:center;
+        text-align:initial;
+    }
+    .about-img img{
+        width:300px;
+    }
+    .work-container{
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:repeat(2,1fr);
+        column-gap:2rem;
+    }
+    .contact-form{
+        width:360px;
+    }
+    .contact-container{
+
+        justify-items:center;
+    }
+}
+@media  screen and (min-width: 1024px ){
+    .bd-grid{
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .home-img{
+        right:10%;
+    }
+}
