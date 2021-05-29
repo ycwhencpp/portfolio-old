@@ -171,8 +171,20 @@ img{
         width:100%;
         background-color:var(--primary-color);
     }
+    .logo-img-container {
+
+        margin-bottom:1.35%;
+        transform:scale(1.1);
+    }
     .nav-logo{
         color:var(--accent-color);
+
+    }
+
+    .nav-logo-img{
+        width:65%;
+        height:100%;
+
     }
     .nav-toogle{
         color:var(--accent-color);
@@ -240,7 +252,7 @@ img{
 
 }
 .button-hire:hover, .button:hover{
-    box-shadow: 0 10px 36px rgba(0,0,0,.15);
+    box-shadow: 0 10px 36px rgba(277,277,277, .15);
 }
 /*----------------------------------------ABOUT SECTION CSS----------------------------------------------*/
 .about-container{

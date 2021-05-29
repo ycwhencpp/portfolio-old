@@ -65,4 +65,15 @@ sr.reveal(".work-img",{interval:200});
 
                                                 /*scroll contact*/
 
-sr.reveal(".contact-input",{interval:200});
+sr.reveal(".contact-input",{interval:350});
+
+
+/*-----------------------------------------------SUBMIT BUTTON ALERT--------------------------------*/
+
+
+document.querySelector(".contact-button").addEventListener("click",function(){
+    alert("Thank You your response has been sumbited");
+     const contact_input=document.querySelectorAll(".contact-input");
+     contact_input.forEach(n=>n.value="");
+
+});
